@@ -3,12 +3,10 @@
 // be sure to exclude the strings
 
 function average(numbers) {
-   let sum = 0;
-   let intNum = numbers.filter((num) => typeof num === "number");
-   for (let i = 0; i < intNum.length; i++) {
-     sum += intNum[i];
-   }
-   return sum / intNum.length;
+    let newArray = numbers.filter((i) => typeof i === "number");
+    let totalValue = newArray.reduce((a, b) => a + b);
+    let average = totalValue / newArray.length;
+    return average;
 }
 
 module.exports = average;
